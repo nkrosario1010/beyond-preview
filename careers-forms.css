@@ -1,0 +1,11 @@
+.insurer-list{padding-left:1.3em;line-height:1.9;color:#162e49;font-weight:700}
+#employment-form,#apply-done{max-width:46rem;margin:auto}
+#employment-form fieldset{border:0;border-top:1px solid #c8c6b3;margin:1.5rem 0;padding:1rem 0 0;min-width:0}
+#employment-form legend{padding:0 .8rem 0 0;font:500 clamp(1.35rem,3vw,1.8rem)/1.2 Georgia,serif;color:#182c45}
+#employment-form label:not(.app-consent){display:block;margin:1rem 0 .3rem;font-weight:700;color:#25364b}
+#employment-form :is(input:not([type=checkbox]):not([type=hidden]),select,textarea){display:block;width:100%;font:inherit;color:#142943;background:#fffefb;border:1px solid #83907d;border-radius:5px;padding:.6rem .7rem;box-sizing:border-box}
+#employment-form textarea{resize:vertical}#employment-form :is(input,select,textarea,button):focus-visible{outline:3px solid #664c78;outline-offset:3px}
+#employment-form .app-consent{display:flex;align-items:baseline;gap:.7rem;border-top:1px solid #d5d0c2;padding-top:1rem}
+#employment-form small{display:block;color:#495567;line-height:1.5;margin-top:.4rem}
+#employment-form button{font:inherit;font-weight:700;cursor:pointer;margin:.2rem 0}#employment-form button:disabled{opacity:.65}#apply-status:not(:empty){margin-top:1rem;color:#592e50}
+.app-trap{position:absolute;left:-10000px;width:1px;overflow:hidden}#apply-done[hidden],#employment-form[hidden]{display:none!important}

@@ -1,0 +1,21 @@
+#resources.resources{background:#faf7ee;padding-block:clamp(48px,7vw,96px);color:#142c45}
+#resources .journey-title{position:relative;isolation:isolate;padding:18px 25% 28px 0;margin:0 auto 24px;max-width:1020px;text-align:left;border-bottom:1px solid #bfa474}
+#resources .journey-title::after{content:"";position:absolute;right:0;bottom:4%;width:25%;height:96%;background:url('05_BRAND_ASSETS/sage-watercolor-green.webp') center/contain no-repeat;pointer-events:none}
+#resources .journey-title h2{font:400 clamp(2.15rem,4.6vw,3.7rem)/1.08 Georgia,serif;color:#102746;text-transform:none;margin:10px 0 16px;text-align:left;text-wrap:balance}
+#resources .journey-title p{margin-left:0;text-align:left;max-width:630px}
+#resources .journey-desk{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;max-width:1020px;margin:0 auto 30px}
+#resources .journey-desk>*{box-sizing:border-box;width:100%;min-width:0;margin:0;text-align:left;padding:clamp(20px,3vw,34px);border:1px solid #a0ae95;border-radius:6px 28px 6px 6px;background:#e9eee1}
+#resources .journey-desk .resource-next{background:#f3eaf3;border-color:#baa3bb;border-left:5px solid #775777}
+#resources .journey-desk h3,#resources .journey-desk label{display:block;font:500 1.6rem/1.15 Georgia,serif;color:#102746}
+#resources .resource-search-row input{min-width:0}
+#resources .resource-container{gap:22px}
+#resources .resource-container[hidden],#resources #resource-results[hidden]{display:none!important}
+#resources .resource-container .resource{overflow:hidden;display:flex;flex-direction:column;border:1px solid #c6b996;border-radius:18px 5px;background:#fffdf6;box-shadow:0 4px 14px #182c3c0c}
+#resources .resource-container .resource h3{font:500 1.45rem/1.2 Georgia,serif;color:#102746}
+#resources .resource-container .resource-link{margin-top:auto}
+#resources .resource-container .resource-photo{border-bottom:3px solid #a5b79b}
+#resources .resource-container .resource:nth-child(3n+2) .resource-photo{border-color:#b99db6}
+#resources .resource-container .resource:nth-child(3n) .resource-photo{border-color:#c8ad76}
+@media(max-width:720px){#resources .journey-desk{grid-template-columns:1fr;gap:14px}#resources .journey-title{padding-right:14%}#resources .journey-title::after{z-index:-1;width:28%;opacity:.18}}
+
+#resources .topic-choice{display:inline-block;margin:3px;padding:5px 12px;border-radius:20px;border:1px solid #93a088;background:#fffdf7;color:#293d34;text-decoration:none}#resources .resource-search-row{flex-wrap:wrap}

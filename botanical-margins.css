@@ -1,0 +1,83 @@
+/* The watercolor in Nicole's reference is an illustration in the margin,
+   separate from the extra-light watermarks used behind other elements. */
+.bb-site {
+  --botanical-ivory:#fbf8ef;
+  --botanical-gold:#be995e;
+}
+.bb-site main .botanical-margin {
+  display:block; position:relative; box-sizing:border-box;
+  width:clamp(8rem,17vw,15.6rem); aspect-ratio:2.15;
+  background:url("05_BRAND_ASSETS/sage-watercolor-green.webp") center / contain no-repeat;
+  transform:rotate(-11deg); opacity:.86; pointer-events:none; user-select:none;
+}
+.bb-site main .margin-left,.bb-site main .margin-right {
+  margin-block:0 clamp(10px,1.9vw,25px);
+  margin-inline:clamp(12px,2.1vw,34px) auto;
+}
+.bb-site main .margin-right {margin-inline:auto clamp(12px,2.1vw,34px);transform:scaleX(-1) rotate(-9deg)}
+/* Place the ink in its own normal-flow band: it cannot cover a link or a heading. */
+.bb-site main > :is(#services.services,#concerns.concerns,#our-story.about,#faq.faq,#resources.resources,#team.bag-team,#start-here.start-here,#contact.contact,.brand-band) {
+  padding-block-start:clamp(8px,1.2vw,16px);
+}
+.bb-site #services.services {
+  background:var(--botanical-ivory); 
+}
+.bb-site main #services .margin-service {
+  width:clamp(9.5rem,19vw,17rem);
+  margin-inline-start:clamp(3px,.7vw,12px);
+  margin-block-end:clamp(26px,6.7vw,93px);
+  opacity:1;
+}
+.bb-site #services .garden-heading{
+  background:none;border:0;border-inline-start:3px solid var(--botanical-gold);
+  padding-inline-start:clamp(18px,2.6vw,36px);text-align:start;
+}
+.bb-site #services .garden-heading h2,.bb-site #services .garden-heading .garden-kicker,.bb-site #services .garden-heading .section-intro{
+  margin-inline-start:0;text-align:start;
+}
+.bb-site #services .garden-heading h2{max-width:19ch;color:#102746}
+.bb-site #services .garden-heading h2::after{margin-inline:0 auto;background:var(--botanical-gold)}
+.bb-site #services .garden-heading .garden-kicker{color:#52664e;font-family:Georgia,serif}
+.bb-site.beyond-info-page #main::before,.bb-site #our-story.about::after,.bb-site #contact.contact::after,.bb-site #start-here.start-here::before,
+.bb-site #concerns.concerns::after,.bb-site #faq.faq::after,.bb-site .brand-band::after,
+.bb-site #services.services::before,.bb-site #services.services::after,.bb-site #resources.resources::before,
+.bb-site #resources .journey-title::after,.bb-site #team.bag-team .sprig,
+.bb-site .reading-cover::after,.bb-site[data-book="directory"] .directory-cover::after,
+.bb-site.beyond-info-page main .page-intro::after {display:none;}
+/* Covers keep their own layout; the left edge is for the words. */
+.bb-site :is(.reading-cover,.directory-cover,.page-intro,.botanical-receipt) {display:flow-root;}
+.bb-site .reading-cover,.bb-site[data-book="directory"] .directory-cover,.bb-site.beyond-info-page main .page-intro {
+  background:var(--botanical-ivory);
+}
+.bb-site main .margin-cover{
+  float:right;width:clamp(7rem,15vw,13rem);
+  margin:-.35rem 0 .75rem clamp(16px,3vw,32px);
+  transform:scaleX(-1) rotate(-10deg);
+}
+.bb-site main .leaf-read .reading-cover h1,
+.bb-site[data-book="directory"] main .directory-cover h1,.bb-site.beyond-info-page main .page-intro h1,
+.bb-site.beyond-info-page .botanical-receipt h1{
+  border-inline-start:2px solid var(--botanical-gold);padding-inline-start:clamp(13px,1.65vw,23px);
+}
+.bb-site :is(#contact,#start-here,#concerns,#our-story) .section-container>h2::after{
+  content:"";display:block;height:1px;width:54px;background:var(--botanical-gold);margin:16px auto 0;
+}
+.bb-site .brand-band .botanical-margin{width:clamp(70px,9vw,124px);margin-block-end:0}
+@media(max-width:700px){
+  .bb-site main .botanical-margin{width:clamp(76px,22vw,130px)}
+  .bb-site main #services .margin-service{width:clamp(110px,29vw,155px);margin-block-end:15px}
+  .bb-site main .margin-cover{width:clamp(75px,18vw,112px);margin:0 0 .4rem 12px}
+  .bb-site main :is(.reading-cover,.directory-cover,.page-intro,.botanical-receipt) h1{clear:both}
+  .bb-site main .brand-band .botanical-margin{width:70px}
+}
+@media print{.bb-site main .botanical-margin{display:none}}
+
+/* Mirrored copies of the same watercolor share one row above the team. */
+.bb-site #team .team-branches {
+  display:flex; justify-content:space-between; align-items:center;
+  padding-inline:clamp(12px,2.1vw,34px); margin-block-end:clamp(10px,1.9vw,25px);
+  pointer-events:none;
+}
+.bb-site #team .team-branches .team-branch-left {transform:rotate(-9deg)}
+.bb-site #team .team-branches .team-branch-right {transform:scaleX(-1) rotate(-9deg)}
+@media print {.bb-site #team .team-branches {display:none}}

@@ -1,0 +1,15 @@
+#faq .faq-container{max-width:980px;gap:28px}
+#faq .garden-group{display:grid;grid-template-columns:minmax(205px,31%) minmax(0,1fr);background:#fffdf7;border:1px solid #bdab83;border-radius:32px 10px 32px 10px;overflow:hidden;box-shadow:0 5px 16px #353b240c;text-align:left}
+#faq .collection-cover{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:end;padding:90px 28px 26px;background:linear-gradient(140deg,#d4e1cc,#f0f2e6);border-right:1px solid #c5b794}
+#faq .collection-spray{position:absolute;left:0;top:0;width:min(88%,225px);height:auto;mix-blend-mode:multiply;pointer-events:none;mask-image:linear-gradient(162deg,#000 34%,transparent 92%)}
+#faq .collection-index{font:600 .73rem/1.4 system-ui,sans-serif;color:#495a47;letter-spacing:.15em;text-transform:uppercase}
+#faq .garden-group .collection-cover h3{font:normal clamp(1.55rem,3vw,2.15rem)/1.07 Georgia,serif;background:none;padding:0;margin:8px 0 0;color:#102746}
+#faq .collection-cover h3::after{content:'';display:block;height:2px;width:44px;background:#ab8a50;margin-top:16px}
+#faq .garden-group:nth-child(2){grid-template-columns:minmax(0,1fr) minmax(205px,31%);border-radius:10px 32px 10px 32px}
+#faq .garden-group:nth-child(2) .collection-cover{grid-column:2;grid-row:1;background:linear-gradient(220deg,#e3d8e5,#f7f0ef);border-left:1px solid #c5b794;border-right:0}
+#faq .garden-group:nth-child(2) .collection-spray{left:auto;right:0;transform:scaleX(-1)}
+#faq .garden-group:nth-child(3) .collection-cover{background:linear-gradient(145deg,#e7daba,#faf3e3)}
+#faq .collection-links{min-width:0;align-self:center;padding:6px 14px}#faq .collection-links .question-route{gap:12px;padding:17px 12px;line-height:1.45}
+#faq .collection-links .question-route:first-child{border-top:0}
+#faq .collection-links .question-route span{display:grid;place-items:center;background:#f1e9f1;border-radius:50%;width:28px;height:28px;flex:none}
+@media(max-width:650px){#faq .garden-group,#faq .garden-group:nth-child(2){display:flex;flex-direction:column}#faq .garden-group .collection-cover{padding:22px 30% 22px 20px;border:0;border-bottom:1px solid #c5b794}#faq .garden-group .collection-spray{width:29%;left:auto;right:0;transform:scaleX(-1)}#faq .collection-links{align-self:stretch;padding:0 8px}#faq .collection-cover h3::after{margin-top:10px}}

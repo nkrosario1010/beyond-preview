@@ -1,0 +1,13 @@
+.family-swing-art{position:absolute;inset:0 0 0 auto;width:90%;overflow:hidden;pointer-events:none}
+.family-swing-art .garden-scene{display:block;width:100%;height:100%}
+@media(max-width:760px){
+  .family-swing-art{inset:auto 0 0;width:100%;height:auto;aspect-ratio:1672/941}
+  .hero-animated .hero-content{padding-bottom:56vw}
+  .hero-animated .hero-wash{height:57vw;background:linear-gradient(to bottom,#faf8f2,transparent 17%)}
+}
+
+/* The original garden spans the hero. The ivory wash is behind the lettering and stationary. */
+@media(min-width:761px){
+ .hero-animated .hero-content{padding-block:clamp(32px,3vw,54px);min-height:clamp(535px,44.7vw,740px)}
+ .hero-wash{background:linear-gradient(90deg,#faf8f2 0%,#faf8f2 27%,rgba(250,248,242,.97) 36%,rgba(250,248,242,.88) 43%,rgba(250,248,242,.45) 51%,transparent 65%),linear-gradient(0deg,rgba(250,248,242,.6),transparent 14%)}
+}

@@ -1,0 +1,23 @@
+#faq.faq{background:#f4efe9;padding-block:clamp(54px,7vw,96px)}
+#faq.faq::before,#faq.faq::after{display:none}
+#faq .section-container{display:grid;grid-template-columns:minmax(0,0.78fr) minmax(0,1.35fr);column-gap:clamp(32px,6vw,90px);align-items:start}
+#faq .garden-heading{position:relative;grid-column:1;margin:0;padding:10px 0 87px;background:none;border:0;border-radius:0;box-shadow:none;text-align:left}
+#faq .garden-heading .garden-leaves{display:none}
+#faq .garden-heading::after{content:"";position:absolute;left:0;bottom:0;width:145px;height:78px;background:url('05_BRAND_ASSETS/sage-watercolor-green.webp') left center/contain no-repeat}
+#faq .garden-heading .garden-kicker{text-align:left;color:#704970}
+#faq .garden-heading h2{font:400 clamp(2.4rem,4.6vw,4rem)/1.06 Georgia,serif;text-align:left;margin:12px 0}
+#faq .garden-heading h2::after{margin:20px 0;width:54px}
+#faq .garden-heading .section-intro{text-align:left;margin:0;line-height:1.65}
+#faq .faq-container{grid-column:2;display:block;margin:0}
+#faq .garden-group,#faq .garden-group:nth-child(2){display:block;overflow:visible;border:0;border-radius:0;box-shadow:none;background:none;margin:0 0 28px}
+#faq .garden-group:nth-child(n) .collection-cover{display:flex;flex-direction:row;align-items:baseline;justify-content:flex-start;gap:13px;padding:0 0 10px;background:linear-gradient(145deg,#e7daba,#faf3e3);border:0;border-bottom:1px solid #b59c74;overflow:visible}
+#faq .collection-cover .collection-spray{display:none}
+#faq .garden-group .collection-cover h3{margin:0;padding:0;color:#142b44;font:500 1.5rem/1.25 Georgia,serif}
+#faq .collection-cover h3::after{display:none}
+#faq .collection-index{color:#704970;font:italic 1.23rem Georgia,serif;letter-spacing:0}
+#faq .collection-links{padding:0}
+#faq .collection-links .question-route{padding:13px 3px;border:0;border-bottom:1px solid #d9cec1;background:none}
+#faq .collection-links .question-route:hover{text-decoration:underline}
+#faq .collection-links .question-route span{background:none;color:#704970}
+#faq .faq-invitation{grid-column:2;width:100%;margin:0;text-align:left;background:transparent;border:0;border-left:3px solid #bda36a;border-radius:0;padding:8px 20px}
+@media(max-width:760px){#faq .section-container{display:block}#faq .garden-heading{padding:0 0 25px;margin-bottom:22px}#faq .garden-heading::after{top:-14px;left:auto;right:0;width:70px;height:50px;opacity:.35}#faq .garden-heading .garden-kicker{padding-right:70px}}

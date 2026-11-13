@@ -1,0 +1,183 @@
+/* The original Beyond site, in the Beyond Botanical palette. The swing artwork
+   and its hero styles deliberately remain owned by family-swing.css. */
+.bb-site{
+ --paper:#fbf8f1;--sheet:#fffdf7;--ink:#152a46;--text:#314257;
+ --sage:#52664e;--mist:#edf1e6;--lavender:#eee6ee;--plum:#674777;
+ --gold:#a88b55;--line:#d9d2bf;--leaf:url("05_BRAND_ASSETS/sage-watercolor-green.webp");
+ --serif:Georgia,'Times New Roman',serif;--reading:'Nunito',Arial,sans-serif;
+ --accent:var(--sage);--tint:var(--mist);background-color:var(--paper);
+}
+.bb-site[data-book="portrait"],.bb-site[data-book="answer"],.bb-site[data-book="learning"],.bb-site[data-page="insurance"]{--accent:#755c7d;--tint:#f1ebf2}
+.bb-site[data-page="careers"],.bb-site[data-book="steps"]{--accent:#806740;--tint:#f4ecde}
+.bb-site[data-page="communication"]{--accent:#735a83;--tint:#f1eaf3}
+.bb-site[data-page="independence"]{--accent:#4d6774;--tint:#e9eff1}
+.bb-site[data-page="family-guidance"]{--accent:#896046;--tint:#f5ebe1}
+.bb-site[data-page="community-learning"]{--accent:#526a85;--tint:#e8edf4}
+.bb-site[data-page="school-collaboration"]{--accent:#78633b;--tint:#f2ecd9}
+.bb-site :where(a,button,input,select):focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+.bb-site header nav a[aria-current="page"],.bb-site .beyond-paths a[aria-current="page"]{text-decoration:underline;text-decoration-color:var(--plum);text-decoration-thickness:2px;text-underline-offset:5px}
+.bb-site .beyond-paths{background:#f6f4ec;border-block:1px solid #dedbcc}
+.bb-site footer:not(.page-footer),.bb-site footer.page-footer{background:#14283f;color:#fffaf1;border-top:3px solid #b2a582}
+.bb-site footer :is(p,h2,a),.bb-site .page-footer a{color:#fffaf1}
+.bb-site footer a:hover{text-decoration:underline;text-underline-offset:4px}
+.bb-site .footer-container h2{font:500 clamp(1.5rem,3vw,2.25rem)/1.22 var(--serif)}
+/* Watercolor belongs at the paper edges. In services the colors do the work. */
+.bb-site #our-story.about::after,.bb-site #resources.resources::before,.bb-site #contact.contact::after,.bb-site #start-here.start-here::before,.bb-site .concerns::after,.bb-site #resources .journey-title::after,.bb-site #team.bag-team .sprig{
+ opacity:.10;filter:none;pointer-events:none;
+}
+.bb-site #resources.resources::before{display:none}
+.bb-site #services.services::before,.bb-site #services.services::after,.bb-site #services .support-card::after{display:none}
+.bb-site :is(.brand-band,#concerns,#our-story,#contact,#start-here) h2{font:500 clamp(2rem,4.1vw,3.5rem)/1.12 var(--serif);letter-spacing:-.027em;color:var(--ink);text-wrap:balance}
+.bb-site .brand-band{background:#f3f1e6;border-block:1px solid var(--line)}
+.bb-site .brand-band h2{font-size:clamp(1.6rem,3.5vw,2.65rem)}
+.bb-site .brand-band p{color:var(--plum)}
+.bb-site #concerns{background:#f6f1e9}
+.bb-site #concerns .section-container{max-width:960px}
+.bb-site #concerns .section-container>p:not(.eyebrow){max-width:68ch;margin-inline:auto}
+.bb-site #our-story{background:#fffdf6}
+.bb-site #our-story .story-subtitle{font:italic 400 clamp(1.14rem,2.25vw,1.58rem)/1.45 var(--serif);color:var(--plum)}
+.bb-site #our-story .about-content{width:min(100%,760px);margin-inline:auto}
+.bb-site #our-story .about-text{border-inline-start:2px solid #b4ad8e;background:none;text-align:left;padding-inline-start:clamp(18px,3vw,34px)}
+.bb-site #our-story .about-text p{line-height:1.8}
+.bb-site #start-here{background:#f3f1e8}
+.bb-site #start-here .founder-welcome{background:var(--sheet);border:1px solid #d3cfb9;border-radius:4px 30px 4px 4px;padding:clamp(20px,3.5vw,46px)}
+.bb-site #contact{background:#f5f2ea}
+.bb-site #contact .contact-panel{max-width:720px;margin-inline:auto;border:1px solid #c4c9b4;border-top:3px solid #99a58d;border-radius:3px 22px 3px 3px;background:var(--sheet);padding:clamp(20px,4vw,38px)}
+.bb-site #contact .contact-panel h3{font:500 1.55rem/1.3 var(--serif);color:var(--ink)}
+.bb-site #contact .email-address{overflow-wrap:anywhere;color:var(--plum);text-underline-offset:.22em}
+.bb-site #contact .emergency-notice{margin-inline:auto;max-width:78ch}
+.bb-site #team.bag-team{background:#f8f6ef}
+.bb-site #team .portrait-grid{align-items:stretch}
+.bb-site #team .person{display:flex;flex-direction:column;border:1px solid #d5cbb5;border-radius:4px 22px 4px 4px;background:var(--sheet);box-shadow:none}
+.bb-site #team .person .plate{flex:1}
+.bb-site #team .bio-route{border-top:1px solid #ded8c8;color:#5d4968;background:#f6f2ec}
+.bb-site #resources.resources{background:#f4f3e9}
+.bb-site #resources .journey-title{border-block-end-color:#b5ac8a}
+.bb-site #resources .journey-desk .resource-next{background:#f2ebf1;border-color:#d1c3d1;border-left-color:#806382}
+.bb-site #resources .resource-container article.resource a.resource-link{background:#dde7d5;border-color:#8f9e80;color:#203a2c}
+.bb-site #resources .resource-container article.resource a.resource-link:hover{background:#ccdcbf}
+.bb-site #services .service-container{align-items:stretch}
+.bb-site #services .service.support-card:nth-child(n){border:1px solid var(--service-accent);border-top-width:4px;border-radius:5px 22px 5px 5px;background:linear-gradient(155deg,var(--service-icon-bg),#fffdf7 85%)}
+.bb-site #services .route-pill{border:1px solid var(--service-accent);background:#fffdf8;color:var(--ink);font-weight:700}
+.bb-site #services .service-route:hover .route-pill{background:var(--service-accent);color:white}
+.bb-site #faq{background:#f6f1eb}
+.bb-site #faq .garden-group:nth-child(n) .collection-cover{padding:9px 12px;background:#ede4d1;border-block:1px solid #d1c39f;border-radius:0}
+.bb-site #faq .question-route{line-height:1.55}
+.bb-site #faq .collection-links .question-route:hover{color:var(--plum);background:#fffaf3}
+.bb-site #faq .garden-heading h2::after{background:linear-gradient(var(--gold),var(--gold)) left center/55px 1px no-repeat}
+/* The short answer, service chapter, field guide and founder biography share a cover,
+   but their reading surfaces and details depend on the purpose of the page. */
+.bb-site:not([data-book="section"]):not([data-book="information"]):not([data-book="directory"]) #main-content{
+ display:flow-root;background:linear-gradient(180deg,var(--tint),var(--paper) 350px);
+}
+.bb-site main .leaf-read{
+ width:min(900px,calc(100% - 2 * clamp(16px,5vw,68px)));max-width:none;margin:clamp(25px,5vw,70px) auto;
+ padding:0;background:var(--sheet);border:1px solid var(--line);border-radius:4px 32px 4px 4px;box-shadow:0 8px 25px #342d2010;overflow:hidden;text-align:left;
+}
+.bb-site main .leaf-read::before{display:none}
+.bb-site .reading-cover{padding:clamp(23px,5vw,52px) clamp(20px,6vw,66px) clamp(22px,4vw,40px);position:relative;isolation:isolate;background:var(--tint);border-bottom:1px solid var(--line)}
+.bb-site .reading-cover::after,.bb-site[data-book="directory"] .directory-cover::after,.bb-site.beyond-info-page main .page-intro::after{content:"";position:absolute;right:0;top:0;bottom:0;width:min(30%,245px);height:auto;background:var(--leaf) center/contain no-repeat;opacity:.10;filter:none;pointer-events:none;z-index:-1}
+.bb-site .reading-cover .back-leaf{display:inline-block;font:700 .91rem/1.45 var(--reading);color:#4b4559;text-underline-offset:.24em}
+.bb-site .reading-cover .collection-label{display:flex;align-items:center;gap:11px;color:var(--accent);margin:clamp(22px,3.1vw,36px) 0 9px;font:700 .74rem/1.5 var(--reading);letter-spacing:.13em;text-transform:uppercase}
+.bb-site .collection-label span{width:32px;height:1px;background:currentColor}
+.bb-site main .leaf-read .reading-cover h1{border:0;padding:0;margin:0;font:500 clamp(2.1rem,4.3vw,3.65rem)/1.09 var(--serif);letter-spacing:-.035em;text-wrap:balance;color:var(--ink)}
+.bb-site .leaf-prose{padding:clamp(24px,4.4vw,48px) clamp(20px,6vw,66px);font:400 clamp(1rem,1.35vw,1.13rem)/1.78 var(--reading);overflow-wrap:break-word}
+.bb-site .leaf-prose :is(h2,h3,h4){font:500 clamp(1.38rem,2.3vw,1.84rem)/1.23 var(--serif);letter-spacing:-.018em;color:var(--ink);margin:1.45em 0 .4em;text-align:left}
+.bb-site .leaf-prose>:first-child,.bb-site .leaf-prose .learning-example>:first-child{margin-top:0}
+.bb-site .leaf-prose>:last-child,.bb-site .leaf-prose .learning-example>:last-child{margin-bottom:0}
+.bb-site .leaf-prose ul,.bb-site .leaf-prose ol{padding-inline-start:1.5em}
+.bb-site .leaf-prose li+li{margin-top:.42em}
+.bb-site .leaf-prose li::marker{color:var(--accent)}
+.bb-site .leaf-prose .learning-example{background:var(--tint);border:0;border-inline-start:3px solid var(--accent);border-radius:0 16px 0 0;padding:18px 22px;margin:25px 0}
+.bb-site .leaf-prose .learning-source{border-top:1px solid var(--line);padding-top:16px}
+.bb-site[data-book="answer"] main .leaf-read{max-width:820px;border-radius:3px 20px 3px 3px}
+.bb-site[data-book="answer"] .leaf-prose{font-size:clamp(1.08rem,1.8vw,1.23rem)}
+.bb-site[data-book="guide"] .leaf-prose>h2:not(:first-child){border-top:1px solid var(--line);padding-top:1em}
+.bb-site[data-book="portrait"] .leaf-prose .profile-intro{display:flex;align-items:center;gap:clamp(16px,4vw,38px);padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.bb-site[data-book="portrait"] .profile-intro .portrait{max-width:42%;width:145px;height:auto;border-radius:4px 18px 4px 4px}
+.bb-site[data-book="portrait"] .leaf-prose > p{margin:0}
+.bb-site[data-book="portrait"] .leaf-prose > p + p{margin-block-start:1.15em}
+.bb-site[data-book="portrait"] .profile-intro p{margin:0;font:italic 1.25rem/1.36 var(--serif);color:var(--plum)}
+.bb-site[data-book="steps"] .steps-container{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.bb-site[data-book="steps"] .start-step{border:1px solid var(--line);background:#f8f5ed;border-radius:4px 15px 4px 4px;padding:18px;text-align:left}
+.bb-site[data-book="steps"] .start-step h3{margin:12px 0}
+.bb-site[data-book="learning"] .coming-soon{display:inline-block;padding:6px 13px;color:#594465;background:var(--tint);border:1px solid #c7b8c9;border-radius:100px}
+/* Practical pages: a wide introduction followed by flat reading sections. */
+.bb-site.beyond-info-page main .page-intro{background:var(--tint);padding-block:clamp(35px,6vw,80px);border-block-end:1px solid var(--line)}
+.bb-site.beyond-info-page main .page-intro::after{right:max(3%,calc((100% - 1140px)/2));width:clamp(135px,27vw,335px)}
+.bb-site.beyond-info-page main .page-intro h1,.bb-site[data-book="directory"] main .directory-cover h1{
+ border:none;margin:.25em 0 .45em;padding:0;letter-spacing:-.04em;color:var(--ink);font:500 clamp(2.35rem,4.9vw,4.2rem)/1.08 var(--serif);text-wrap:balance;
+}
+.bb-site.beyond-info-page .page-intro .eyebrow,.bb-site[data-book="directory"] .eyebrow{color:var(--accent);font:700 .77rem/1.5 var(--reading);letter-spacing:.13em;text-transform:uppercase}
+.bb-site.beyond-info-page main .page-section{padding:clamp(20px,4vw,40px);border-radius:3px 22px 3px 3px;margin-block:clamp(24px,3vw,42px)}
+.bb-site.beyond-info-page .page-section :is(h2,h3){font:500 clamp(1.55rem,3vw,2.15rem)/1.2 var(--serif);text-wrap:balance}
+.bb-site.beyond-info-page .page-section h3{font-size:1.28rem}
+.bb-site.beyond-info-page .notice{background:var(--tint);border:1px solid var(--line);border-inline-start:3px solid var(--accent);border-radius:0 15px 0 0}
+.bb-site.beyond-info-page .notice.soft,.bb-site.beyond-info-page .question-list article{background:#f3f4ea}
+.bb-site.beyond-info-page :is(.path-grid li,.info-grid article,.question-list article){border:1px solid var(--line);border-radius:3px 14px 3px 3px}
+.bb-site.beyond-info-page .path-grid li::before{border:1px solid #afba9e;color:#37523d;background:#e8eddf}
+.bb-site.beyond-info-page .page-button{border:1px solid #8d9e82;border-radius:100px;background:#dfe9d8;color:#253d2c}
+.bb-site.beyond-info-page .page-button:hover{background:#cedec4}
+.bb-site.beyond-info-page .contact-block{border-top:3px solid var(--accent)}
+/* New Jersey directory: emphasize filters and guide links before the alphabetical index. */
+.bb-site[data-book="directory"] header{background:var(--sheet);border-bottom:1px solid var(--line)}
+.bb-site[data-book="directory"] #main::before{display:none}
+.bb-site[data-book="directory"] .directory-cover{isolation:isolate;position:relative;background:#edf0e3;border:1px solid #cdd3bc;border-radius:4px 28px 4px 4px;padding:clamp(22px,4.5vw,52px);overflow:hidden}
+.bb-site[data-book="directory"] .directory-cover::after{width:min(33%,300px);right:4%;transform:rotate(-14deg)}
+.bb-site[data-book="directory"] .directory-cover .intro{max-width:72ch;margin-block:.7em}
+.bb-site[data-book="directory"] .directory-cover .eyebrow{margin-top:0}
+.bb-site[data-book="directory"] .panel{background:var(--sheet);border:1px solid var(--line);border-inline-start:3px solid #93a384;border-radius:3px 16px 3px 3px}
+.bb-site[data-book="directory"] .panel>strong,.bb-site[data-book="directory"] .directory-guides h2{font:500 clamp(1.45rem,2.8vw,1.95rem)/1.25 var(--serif);color:var(--ink)}
+.bb-site[data-book="directory"] .filters>*{min-width:0}
+.bb-site[data-book="directory"] :is(input,select){border:1px solid #85927f;max-width:100%;min-height:46px;background:#fffefb}
+.bb-site[data-book="directory"] #reset{border:1px solid #8d9e82;background:#e3ebdb;color:#29402e;border-radius:100px;padding:8px 18px}
+.bb-site[data-book="directory"] .directory-guides{padding:14px 0 20px;border-bottom:1px solid var(--line)}
+.bb-site[data-book="directory"] .directory-guides>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
+.bb-site[data-book="directory"] .directory-guides p{margin:0}
+.bb-site[data-book="directory"] .journey-guide{height:100%;padding:14px 0;border:0;border-bottom:1px solid var(--line);background:none;border-radius:0;color:var(--plum);text-align:left}
+.bb-site[data-book="directory"] .journey-guide:hover{text-decoration:underline}
+.bb-site[data-book="directory"] #status{font-weight:700;color:#4a5c49}
+.bb-site[data-book="directory"] #directory .card{border:1px solid var(--line);border-top:3px solid #9fae92;border-radius:3px 17px 3px 3px;background:var(--sheet)}
+.bb-site[data-book="directory"] #directory .card h2{font:500 clamp(1.36rem,2.2vw,1.7rem)/1.2 var(--serif);color:var(--ink);text-wrap:balance}
+.bb-site[data-book="directory"] #directory .tag{color:#455c43;font-weight:700;margin-top:0}
+.bb-site[data-book="directory"] #directory .card .check{border-inline-start:2px solid #b7bca5;padding-inline-start:12px}
+.bb-site[data-book="directory"] #directory .card a{color:var(--plum)}
+.bb-site[data-book="directory"] footer{max-width:none;padding-inline:max(5%,calc((100% - 1120px)/2))}
+@media(max-width:720px){
+ .bb-site[data-book="directory"] .directory-guides>div,.bb-site[data-book="steps"] .steps-container{grid-template-columns:1fr}
+ .bb-site .reading-cover::after{width:32%;max-width:120px}
+ .bb-site.beyond-info-page main .page-intro::after{width:32%;right:0}
+ .bb-site #contact .contact-panel{box-sizing:border-box;width:100%}
+ .bb-site .leaf-prose{line-height:1.68}
+}
+@media print{
+ .bb-site main .leaf-read,.bb-site[data-book="directory"] .directory-cover,.bb-site main .page-section{box-shadow:none;background:white}
+ .bb-site .reading-cover::after,.bb-site[data-book="directory"] .directory-cover::after{display:none}
+}
+
+/* Resource buttons echo the six service accents; the light tint remains visible
+   on touchscreens, and keyboard focus has the same filled treatment as hover. */
+#resources .resource-container>.resource:nth-child(1){--card-accent:#526f41;--card-wash:#dae6d0}
+#resources .resource-container>.resource:nth-child(2){--card-accent:#146e70;--card-wash:#c5e4de}
+#resources .resource-container>.resource:nth-child(3){--card-accent:#69458f;--card-wash:#e4d8ed}
+#resources .resource-container>.resource:nth-child(4){--card-accent:#885f4a;--card-wash:#f0ddd0}
+#resources .resource-container>.resource:nth-child(5){--card-accent:#476883;--card-wash:#d4e1ec}
+#resources .resource-container>.resource:nth-child(6){--card-accent:#786338;--card-wash:#eee2c2}
+.bb-site #resources .resource-container article.resource a.resource-link{
+ background:var(--card-wash);color:#182e43;border:1.5px solid var(--card-accent);margin-top:auto;
+}
+.bb-site #resources .resource-container article.resource a.resource-link:is(:hover,:focus-visible,:active){
+ background:var(--card-accent);border-color:var(--card-accent);color:white;
+}
+.bb-site #resources .resource-container article.resource a.resource-link:focus-visible{outline:3px solid #243653;outline-offset:3px}
+.bb-site .guide-shelf{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.bb-site .leaf-prose .guide-shelf li{margin:0}
+.bb-site .leaf-prose .guide-shelf a{display:block;height:100%;box-sizing:border-box;text-decoration:none;border:1px solid #b8c5af;border-radius:3px 17px 3px 3px;padding:18px;background:#f3f5ec;color:var(--ink)}
+.bb-site .guide-shelf a strong{display:block;font:500 1.25rem/1.3 var(--serif);color:var(--plum);text-decoration:underline;text-underline-offset:.15em}
+.bb-site .guide-shelf a span{display:block;margin-top:7px;font-size:.97rem;line-height:1.55}
+.bb-site .leaf-prose .guide-shelf a:is(:hover,:focus-visible){background:#eaeede;border-color:#8a9b80}
+.bb-site #nj-starting-points,.bb-site #status,.bb-site #directory article[id]{scroll-margin-block-start:9rem}
+.bb-site #directory .card:target{border-color:#6c5474;outline:2px solid #6c5474;outline-offset:1px}
+@media(max-width:600px){.bb-site .guide-shelf{grid-template-columns:1fr}}
+
+#resource-topics{scroll-margin-block-start:8rem}

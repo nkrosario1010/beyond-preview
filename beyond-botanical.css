@@ -1,0 +1,26 @@
+:root{--bb-paper:#fbf8ef;--bb-ink:#152b44;--bb-gold:#b39860;--bb-line:#94a68c;--bb-spray:url("05_BRAND_ASSETS/sage-watercolor-green.webp")}
+body.bb-site{background-color:var(--bb-paper);color:var(--bb-ink)}
+.bb-site main a:focus-visible{outline:3px solid #735277;outline-offset:2px}
+.bb-site main .leaf-read,.bb-site main .page-section{box-sizing:border-box;background:#fffdf6;border:1px solid #d4d7c4;border-radius:6px 24px 6px 6px;padding:clamp(19px,4vw,44px)}
+.bb-site main .leaf-read h1,.bb-site main .page-intro h1,.bb-site main>h1{color:var(--bb-ink);font-family:Georgia,serif;font-weight:500;border-bottom:1px solid var(--bb-gold);padding-bottom:18px}
+.bb-site main .leaf-read,.bb-site main .page-intro,.bb-site main>.intro:first-of-type{position:relative;isolation:isolate}
+.bb-site main .leaf-read::before,.bb-site main .page-intro::after{content:"";position:absolute;z-index:-1;right:0;top:0;width:clamp(90px,18vw,210px);height:95px;pointer-events:none;background:var(--bb-spray) center/contain no-repeat;opacity:.1}
+.bb-site main :is(.leaf-prose,.page-section) a:not(.primary-link){color:#5c4164;text-underline-offset:.18em}
+.bb-site :is(#our-story,#contact,#start-here){background-color:var(--bb-paper)}
+.bb-site :is(#our-story,#contact,#start-here) h2{font-family:Georgia,serif;font-weight:500;color:var(--bb-ink)}
+.bb-site #directory .card{background:#fffdf6;border:1px solid var(--bb-line);border-top:3px solid #b9aa80}
+/* FAQ keeps its quiet index; a single leaf spray finishes the fine gold rule. */
+#faq .garden-heading h2::after{content:"";display:block;width:106px;height:21px;margin:14px 0;background:var(--bb-spray) right center/49px auto no-repeat,linear-gradient(var(--bb-gold),var(--bb-gold)) left center/61px 1px no-repeat}
+#faq .garden-heading::after{display:none}
+#faq .garden-heading{padding-bottom:24px}
+/* Six service colors remain visible in the edge, icon and tinted foot of each card. */
+#services .service.support-card:nth-child(n){position:relative;isolation:isolate;border:1px solid var(--service-accent);border-top:3px solid var(--service-accent);border-radius:24px 6px 18px 6px;background:linear-gradient(153deg,#fffdf6 43%,var(--service-icon-bg) 145%);box-shadow:0 3px 12px #2636220b;align-self:stretch}
+#services .support-card::after{content:"";pointer-events:none;position:absolute;right:-8px;top:-5px;width:106px;height:90px;background:var(--bb-spray) center/contain no-repeat;transform:rotate(25deg);opacity:.12;z-index:-1}
+#services .service-route{height:100%}
+#services .service-route .service-icon{border:1px solid var(--service-accent);color:var(--service-accent);background:var(--service-icon-bg)}
+/* Only soften the decorative artwork, never the portraits. */
+#team.bag-team .sprig{opacity:.13;filter:saturate(.7);mask-image:radial-gradient(ellipse at top left,#000 18%,transparent 76%)}
+/* Ivory mats and sage outer frames give the library photographs a printed feel. */
+#resources .resource-container article.resource{box-sizing:border-box;border:1.5px solid #91a187;border-radius:18px 6px;background:#fffdf5;padding:clamp(14px,2vw,22px);box-shadow:inset 0 0 0 4px #fffdf5,inset 0 0 0 5px #d9ceae}
+#resources .resource-container article.resource img.resource-photo{box-sizing:border-box;width:100%;margin:0 0 13px;border:0;border-bottom:2px solid var(--bb-gold);border-radius:8px 3px 0 0}
+#resources .resource-container article.resource .resource-link{align-self:flex-start;color:#59425e;text-underline-offset:.2em}
