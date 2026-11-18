@@ -26,3 +26,22 @@
 body:has(.bf-launch) footer{padding-bottom:max(68px,env(safe-area-inset-bottom))}
 @media(max-width:1000px){.bf-links{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:690px){.bf-form-grid{grid-template-columns:1fr}.bf-quick{padding:28px 5%}.bf-links{gap:8px}.bf-links a{padding:12px;align-items:flex-start;flex-direction:column;gap:4px}.bf-arr{display:none}.bf-launch{left:10px;padding:7px 12px}.bf-inline{padding:14px}.bf-form-head .bf-emblem{display:none}.bf-start{padding-top:25px}.bf-start .bf-form-card{padding:18px}.bf-dialog{bottom:max(8px,env(safe-area-inset-bottom))}}@media(max-width:350px){.bf-links{grid-template-columns:1fr}.bf-links a{flex-direction:row;align-items:center;gap:9px}}
 .bf-start input.bf-tel{display:block;width:100%;font:inherit;color:#102746;background:#fff;border:1px solid #859780;border-radius:6px;padding:10px 12px;margin:.5rem 0}.bf-start #bf-callback .bf-note{margin:.4rem 0 1.3rem}.bf-start .bf-msg{padding:14px;border-left:3px solid #9aab91;background:#f0f3ea}
+
+/* A welcoming slide-in, scoped to the family guide only. */
+.bf-launch{left:auto;right:max(18px,env(safe-area-inset-right));background:#395b46;color:#fff;border-color:#395b46;padding:12px 19px;box-shadow:0 5px 20px #19302b26}
+.bf-launch:hover{background:#294733}
+.bf-dialog{inset:20px 20px 20px auto;width:min(420px,calc(100% - 40px));max-height:calc(100dvh - 40px);height:fit-content;margin-block:auto;border-radius:24px 6px 6px 24px;border-color:#bdcbb4}
+.bf-dialog[open]{animation:bf-slide-in .38s cubic-bezier(.2,.8,.2,1)}
+.bf-dialog[open].bf-closing{animation:bf-slide-out .22s ease-in forwards}
+.bf-pane{padding:26px;position:relative;isolation:isolate}
+.bf-pane:before{content:"";position:absolute;top:0;right:10px;width:170px;height:92px;background:url("05_BRAND_ASSETS/sage-watercolor-green.webp") center/contain no-repeat;opacity:.17;z-index:-1;pointer-events:none}
+.bf-top{padding-bottom:12px;border-bottom:1px solid #cdd7c5}.bf-dialog .bf-welcome{font-size:1rem;margin:16px 0 12px}
+.bf-primary{display:grid;gap:10px;padding-bottom:16px;border-bottom:1px solid #ded9c9}.bf-primary .bf-call{text-align:center;font-size:.94rem}
+.bf-faqs{margin-top:18px;border-top:1px solid #d5ddcd}.bf-faqs details{border-bottom:1px solid #d5ddcd}.bf-faqs summary{cursor:pointer;padding:13px 24px 13px 0;position:relative;list-style:none;font-weight:700;font-size:.92rem;color:#355844}.bf-faqs summary::-webkit-details-marker{display:none}.bf-faqs summary:after{content:'+';position:absolute;right:2px;top:9px;font-size:1.35rem;font-weight:400}.bf-faqs details[open] summary:after{content:'−'}.bf-faqs details[open] .bf-detail-body{animation:bf-drop .25s ease-out}.bf-detail-body{padding-bottom:14px}.bf-dialog .bf-detail-body p{margin:0 0 8px;font-size:.87rem}.bf-detail-body a{font-size:.87rem;color:#69458d;font-weight:700;text-underline-offset:3px}
+.bf-teaser{position:fixed;right:18px;bottom:82px;width:min(300px,calc(100% - 36px));padding:22px;background:#fbf8f0;border:1px solid #b9c7af;border-radius:18px 18px 4px 18px;box-shadow:0 8px 35px #19302b26;color:#102746;font:400 15px/1.5 Nunito,Arial,sans-serif;z-index:48;animation:bf-slide-in .4s ease-out;box-sizing:border-box}.bf-teaser[hidden]{display:none}.bf-teaser .bf-close{position:absolute;right:4px;top:2px}.bf-teaser .bf-kicker{color:#355844;font-size:.62rem;padding-right:22px}.bf-teaser h2{font:400 1.5rem/1.2 Georgia,serif;margin:10px 0}.bf-teaser p{margin:10px 0}.bf-teaser>button:last-child{border:0;background:transparent;color:#355844;text-decoration:underline;text-underline-offset:3px;font:700 .95rem/1.5 Nunito,Arial,sans-serif;padding:9px 0;min-height:44px;cursor:pointer}.bf-teaser :focus-visible{outline:3px solid #69458d;outline-offset:3px}
+@keyframes bf-slide-in{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:translateX(0)}}
+@keyframes bf-slide-out{to{opacity:0;transform:translateX(48px)}}
+@keyframes bf-drop{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.bf-dialog{inset:max(10px,env(safe-area-inset-top)) 10px auto 10px;width:calc(100% - 20px);max-height:calc(100dvh - 20px);margin:0;border-radius:8px 8px 22px 22px}.bf-dialog[open]{animation-name:bf-drop}.bf-pane{padding:20px}.bf-launch{right:12px;left:auto}.bf-teaser{right:12px;bottom:78px}}
+@media(prefers-reduced-motion:reduce){.bf-dialog[open],.bf-dialog[open].bf-closing,.bf-teaser,.bf-faqs details[open] .bf-detail-body{animation:none}}
+@media print{.bf-launch,.bf-teaser,.bf-dialog{display:none!important}}
